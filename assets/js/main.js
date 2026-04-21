@@ -20,12 +20,12 @@
 	// This function will create a typewriter effect for the phrases in the array
 	const phrases = [
 		"OSCP+ Certified",
-		"Penetration Tester",
+		"Senior Cybersecurity Analyst",
+		"Web Application Penetration Tester",
 		"AppSec Specialist",
 		"Red Team Operator",
 		"Adversary Emulation",
 		"Hands-on Exploitation",
-		"SAST/DAST Validation"
 	];
 
 
@@ -124,55 +124,6 @@
 	  });
 	  
 
-	let currentSlide = 0;
-	const slides = document.querySelectorAll('.carousel-slide');
-	const totalSlides = slides.length;
-	const slideIndicator = document.getElementById('slideIndicator');
-
-	function showSlide(index) {
-		slides.forEach((slide, i) => {
-			slide.classList.toggle('active', i === index);
-		});
-		slideIndicator.textContent = `${index + 1} / ${totalSlides}`;
-	}
-
-	document.getElementById('nextSlide').addEventListener('click', () => {
-		currentSlide = (currentSlide + 1) % totalSlides;
-		showSlide(currentSlide);
-	});
-
-	document.getElementById('prevSlide').addEventListener('click', () => {
-		currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-		showSlide(currentSlide);
-	});
-
-	// Modal logic
-	const modalTriggers = document.querySelectorAll('.myBtn_multi');
-	const modals = document.querySelectorAll('.modal_multi');
-	const closeBtns = document.querySelectorAll('.close_multi');
-
-	modalTriggers.forEach(trigger => {
-		trigger.addEventListener('click', () => {
-			const modalId = trigger.getAttribute('data-modal');
-			const modal = document.getElementById(modalId);
-			if (modal) modal.style.display = 'block';
-		});
-	});
-
-	closeBtns.forEach(btn => {
-		btn.addEventListener('click', () => {
-			btn.closest('.modal').style.display = 'none';
-		});
-	});
-
-	window.addEventListener('click', e => {
-		modals.forEach(modal => {
-			if (e.target === modal) modal.style.display = 'none';
-		});
-	});
-
-	// Initialize first slide
-	showSlide(currentSlide);
 
 
 
