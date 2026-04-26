@@ -20,11 +20,9 @@
 	// This function will create a typewriter effect for the phrases in the array
 	const phrases = [
 		"OSCP+ Certified",
-		"Senior Cybersecurity Analyst",
+		"Penetration Tester",
 		"Web Application Penetration Tester",
 		"AppSec Specialist",
-		"Red Team Operator",
-		"Adversary Emulation",
 		"Hands-on Exploitation",
 	];
 
@@ -52,7 +50,7 @@
 		if (shuffledPhrases.length === 0 || sentenceIndex >= shuffledPhrases.length) {
 			shuffledPhrases = shuffleArray(phrases);
 
-			// Make sure the first item isn’t the same as the last
+			// Make sure the first item isn't the same as the last
 			if (shuffledPhrases[0] === phrases[lastIndex]) {
 				// swap first and second if they match
 				if (shuffledPhrases.length > 1) {
@@ -103,6 +101,12 @@
 	});
 
 	// Modal
+	function closeAllModals() {
+		document.querySelectorAll('.modal').forEach(modal => {
+			modal.style.display = 'none';
+		});
+	}
+
 	document.querySelectorAll('.open-modal-btn').forEach(button => {
 		button.addEventListener('click', () => {
 		  const modalId = button.getAttribute('data-modal');
@@ -122,7 +126,13 @@
 		  if (e.target === modal) modal.style.display = 'none';
 		});
 	  });
-	  
+
+	window.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeAllModals();
+		}
+	});
+
 
 
 
