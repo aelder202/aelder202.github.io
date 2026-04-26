@@ -4,6 +4,7 @@
 <head>
 	<title>Taylor Elder - Portfolio</title>
 	<meta charset="utf-8" />
+	<meta name="description" content="Taylor Elder's offensive security portfolio featuring penetration testing projects, certifications, education, and personal background." />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
@@ -20,7 +21,7 @@
 				<a href="#top" class="scrolly" id="top-link">
 					<h1 id="title">Taylor Elder</h1>
 				</a>
-				<p>Senior Cybersecurity Analyst</p>
+				<p>Penetration Tester</p>
 			</div>
 
 			<!-- Nav -->
@@ -43,7 +44,7 @@
 			<ul class="icons">
 				<h1>Connect With Me</h1>
 				<li><a href="https://github.com/aelder202" target="_blank" class="icon brands" title="GitHub"><i class="fab fa-github"></i></a></li>
-				<li><a href="https://app.hackthebox.com/profile/2048041" target="_blank" class="icon brands" title="HackTheBox"><i class="fas fa-cube"></i></a></li>
+				<li><a href="https://app.hackthebox.com/users/2048041" target="_blank" class="icon brands" title="HackTheBox"><i class="fas fa-cube"></i></a></li>
 				<li><a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" class="icon brands" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
 				<li><a href="mailto:contact@taylorelder.com" class="icon brands" title="Email"><i class="far fa-envelope"></i></a></li>
 			</ul>
@@ -60,10 +61,20 @@
 			<div class="overlay"></div>
 			<div class="content">
 				<div class="blur-box">
+					<p class="eyebrow">Offensive Security Portfolio</p>
 					<h1 class="cyber-title">Taylor Elder</h1>
-					<p class="cyber-subtitle">Senior Cybersecurity Analyst</p>
+					<p class="cyber-subtitle">Penetration Tester</p>
 					<p class="typewriter-line"><span id="typewriter"></span></p>
-					<a href="#skills" class="btn-banner scrolly">Explore Skills</a>
+					<p class="hero-summary">Penetration testing across web, API, and network infrastructure — with OSCP-validated exploitation skills covering Active Directory environments and host-based privilege escalation.</p>
+					<div class="hero-metrics" aria-label="Professional highlights">
+						<span><strong>OSCP+</strong><small>Certified</small></span>
+						<span><strong>3+</strong><small>Years Pentesting</small></span>
+						<span><strong>Web/API/Infra</strong><small>Testing Focus</small></span>
+					</div>
+					<div class="hero-actions">
+						<a href="#projects" class="btn-banner scrolly">View Projects</a>
+						<a href="#contact" class="btn-banner btn-banner-secondary scrolly">Contact</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -77,39 +88,48 @@
 				</header>
 				<div class="skill-grid">
 					<div class="skill-column">
-						<h3>Core</h3>
+						<h3>Assessment</h3>
 						<ul>
-							<li>Web Application Testing</li>
-							<li>API Testing</li>
-							<li>Infrastructure Testing</li>
-							<li>Vulnerability Management</li>
-							<li>DAST/SAST Methodology</li>
-							<li>Static Code Analysis</li>
-							<li>Manual Vulnerability Testing</li>
+							<li>Web Application Penetration Testing</li>
+							<li>API Penetration Testing</li>
+							<li>Network Penetration Testing</li>
+							<li>Active Directory Attacks</li>
+							<li>Privilege Escalation & Post-Exploitation</li>
+							<li>Source Code Security Review</li>
+							<li>Attack Path Development</li>
 						</ul>
 					</div>
 					<div class="skill-column">
-						<h3>Technical</h3>
+						<h3>Tools & Frameworks</h3>
 						<ul>
 							<li>Burp Suite</li>
 							<li>Fortify SAST</li>
 							<li>OWASP Top 10</li>
-							<li>Vulnerability Scanning</li>
-							<li>Scripting & Automation</li>
+							<li>OWASP Web Security Testing Guide</li>
+							<li>Authenticated DAST Scanning</li>
+							<li>Exploit Proof-of-Concept Development</li>
+						</ul>
+					</div>
+					<div class="skill-column">
+						<h3>Recon & Enumeration</h3>
+						<ul>
+							<li>Nmap</li>
+							<li>DNS Analysis with dig</li>
+							<li>WHOIS Research</li>
+							<li>Packet Capture with tcpdump</li>
 							<li>Service Enumeration</li>
-							<li>Linux & Shell Proficiency</li>
+							<li>Linux & Shell Workflow</li>
 						</ul>
 					</div>
 					<div class="skill-column">
 						<h3>Operational</h3>
 						<ul>
-							<li>Vulnerability Validation</li>
-							<li>Proof-of-Concept Development</li>
-							<li>Attack Surface Enumeration</li>
-							<li>OWASP WSTG</li>
-							<li>Vulnerability Disclosure Programs</li>
-							<li>Security Control Assessment</li>
-							<li>Phishing Simulation</li>
+							<li>Vulnerability Management</li>
+							<li>Risk-Based Severity Scoring</li>
+							<li>External Researcher Submission Triage</li>
+							<li>Security Finding Peer Review</li>
+							<li>Remediation Guidance & Reporting</li>
+							<li>AppSec Program Development</li>
 						</ul>
 					</div>
 				</div>
@@ -156,7 +176,7 @@
 				<br>
 
 				<h3 class="edu-label">Major</h3>
-				<p class="edu-value">Cyber Security, B.S.</p>
+				<p class="edu-value">Cyber Defense, B.S.</p>
 
 				<h3 class="edu-label">Latin Honors Received</h3>
 				<p class="edu-value">Magna Cum Laude</p>
@@ -177,6 +197,21 @@
 
 				<div class="project-grid">
 
+					<div class="project-card project-card-featured">
+						<div class="project-visual sable-visual" role="img" aria-label="Sable command and control framework interface preview">
+							<span class="terminal-dot"></span>
+							<span class="terminal-dot"></span>
+							<span class="terminal-dot"></span>
+							<code>sable&gt; sessions --transport https,dns</code>
+							<code>[+] encrypted beacon accepted</code>
+							<code>[+] operator ui: 127.0.0.1:8443</code>
+						</div>
+						<span class="project-kicker">Featured Project</span>
+						<h3>Sable C2 Tool</h3>
+						<p>An open source Go command-and-control tool with encrypted HTTPS beacons, DNS fallback, and operator access through a Web UI and CLI.</p>
+						<button class="open-modal-btn" data-modal="modal-sable">Learn More</button>
+					</div>
+
 					<div class="project-card">
 						<img src="images/gui_threat.png" alt="E-Guard Keylogger Detector">
 						<h3>E-Guard Keylogger Detector</h3>
@@ -185,29 +220,41 @@
 					</div>
 
 					<div class="project-card">
-						<img src="images/sphinx_project.png" alt="Virtual Labs">
-						<h3>Virtual Labs</h3>
-						<p>Rebuilt cybersecurity lab documents using Sphinx and reStructuredText, then presented them as a teaching assistant.</p>
-						<button class="open-modal-btn" data-modal="modal-virtual-labs">Learn More</button>
-					</div>
-
-					<div class="project-card">
-						<img src="images/python_scripting.png" alt="Secure Python Scripting">
-						<h3>Secure Python Scripting</h3>
-						<p>Updated secure coding curriculum from Python 2 to Python 3 for Linux and Windows, then delivered it as a teaching assistant.</p>
-						<button class="open-modal-btn" data-modal="modal-secure-python">Learn More</button>
-					</div>
-
-					<div class="project-card">
 						<img src="images/runbook.png" alt="Red Team Reference Manual">
 						<h3>Red Team Reference Manual</h3>
-						<p>An ongoing reference manual built through HackTheBox and lab practice — categorized commands, techniques, and notes for penetration testing engagements.</p>
+						<p>An ongoing reference manual built through HackTheBox and lab practice — covering web exploitation, network attacks, Active Directory enumeration, and privilege escalation techniques across Windows and Linux targets.</p>
 						<button onclick="window.open('https://taylorelder.com/red-team-runbook','_blank')">View Site</button>
 					</div>
 
 				</div>
 			</div>
 		</section>
+
+
+		<!-- Modal for Sable -->
+		<div class="modal modal_multi" id="modal-sable">
+			<div class="modal-content">
+				<span class="close close_multi">&times;</span>
+				<h2 class="modal-title">Sable C2 Tool</h2>
+				<p class="body-text">
+					Sable is an authorized-use command-and-control tool written in Go. The project
+					implements a Sable server that receives encrypted agent beacons over HTTPS with DNS as a
+					fallback transport, then exposes operator workflows through a browser-based Web UI and an
+					interactive CLI.
+				</p>
+				<p class="body-text">
+					The architecture highlights secure operator boundaries and agent communication design:
+					AES-256-GCM encrypted beacons, HMAC-SHA256 authentication, HKDF-derived keys, replay
+					protection with nonce caching, timestamp validation, TLS certificate fingerprint pinning,
+					JWT-protected REST endpoints, and a loopback-only operator API.
+				</p>
+				<div class="modal-actions">
+					<button onclick="window.open('https://github.com/aelder202/sable','_blank')" type="button">
+						<i class="fab fa-github fa-fw"></i> View on GitHub
+					</button>
+				</div>
+			</div>
+		</div>
 
 
 		<!-- Modal for E-Guard -->
@@ -236,89 +283,6 @@
 		</div>
 
 
-		<!-- Modal for Virtual Labs -->
-		<div class="modal modal_multi" id="modal-virtual-labs">
-			<div class="modal-content">
-				<span class="close close_multi">&times;</span>
-				<h2 class="modal-title">Virtual Labs</h2>
-				<p class="body-text">
-					I began by completing and refining lab documents on various cybersecurity topics,
-					including data anonymization, virtual switches and bridges, network virtualization
-					with Open vSwitch and Linux Bridge, OpenFlow software, SDN controllers, Overlay
-					Network protocols, Network Intrusion Detection Systems, system and network
-					vulnerabilities (using Nmap), TCP/IP security, firewall configurations, and VPN basics.
-					<br><br>
-					After several weeks of debugging, I partnered with another Research Assistant to
-					rebuild these documents using Sphinx. We converted .docx files to reStructuredText,
-					using bash scripts for efficiency. This transformation provided a cohesive format
-					with improved graphics and syntax.
-					<br><br>
-					Following the project's completion and peer review, we helped teach and present
-					these lab documents to students during a week-long workshop. Acting as Teaching
-					Assistants to the leading professor, we supported participants with understanding
-					and applying the material.
-				</p>
-				<p class="body-text">
-					<strong>Source Files:</strong>
-					<a href="images/linux_bridge.pdf" target="_blank">Linux Bridge Lab</a>,
-					<a href="https://github.com/seed-labs/seed-labs" target="_blank">SEED Labs</a>
-				</p>
-				<p class="body-text">
-					<strong>Contributors:</strong>
-					<a href="https://github.com/aelder202" target="_blank">Taylor Elder</a>,
-					<a href="https://github.com/matthewoneil0" target="_blank">Matthew O'Neil</a>
-				</p>
-				<div class="modal-actions">
-					<button onclick="window.open('https://taylorelder.com/sphinx_project/','_blank')" type="button">
-						<i class="fas fa-eye fa-fw"></i> View Project
-					</button>
-					<button onclick="window.open('https://github.com/aelder202/sphinx_project','_blank')" type="button">
-						<i class="fab fa-github fa-fw"></i> View on GitHub
-					</button>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Modal for Secure Python Scripting -->
-		<div class="modal modal_multi" id="modal-secure-python">
-			<div class="modal-content">
-				<span class="close close_multi">&times;</span>
-				<h2 class="modal-title">Secure Python Scripting</h2>
-				<p class="body-text">
-					The materials in this project were originally developed by Catalyzing Computing
-					and Cybersecurity in Community Colleges (C5) project and contained PowerPoint
-					presentations with corresponding lab documents that instruct beginner programmers
-					how to write secure and robust Python code.
-					<br><br>
-					This project was created originally using Python 2 and specifically for Linux.
-					I, along with two other Research Assistants, were tasked with updating the
-					PowerPoints, lab documents, and solutions to Python 3 as well as creating both
-					Linux and Windows friendly versions.
-					<br><br>
-					Once our task was completed and peer reviewed, the updated project was presented
-					to a group of students with no prior coding experience at a university in
-					California for a week-long workshop. Myself and the two other Research Assistants
-					participated as Teaching Assistants, helping students one-on-one and as a group.
-				</p>
-				<p class="body-text">
-					<strong>Source Files:</strong> Any files in the repository not inside 'For Linux' or 'For Windows' directories.
-				</p>
-				<p class="body-text">
-					<strong>Contributors:</strong>
-					<a href="https://github.com/aelder202" target="_blank">Taylor Elder</a>,
-					<a href="https://github.com/matthewoneil0" target="_blank">Matthew O'Neil</a>,
-					<a href="https://github.com/jacobdoescode" target="_blank">Jacob McClain</a>
-				</p>
-				<div class="modal-actions">
-					<button onclick="window.open('https://github.com/nexus-lab/secure_scripting_python','_blank')" type="button">
-						<i class="fab fa-github fa-fw"></i> View on GitHub
-					</button>
-				</div>
-			</div>
-		</div>
-
-
 		<!-- About Me -->
 		<section id="about" class="three">
 			<div class="container">
@@ -330,15 +294,14 @@
 				<h3 class="section-heading">Background</h3>
 				<br>
 				<p class="body-text">
-					Driven offensive security professional passionate about staying ahead of evolving 
-					threats through continuous learning and meticulous testing methodologies. OSCP-certified 
-					with three years of experience conducting penetration testing and source code security 
-					reviews for web applications and APIs. Proven track record identifying critical 
-					vulnerabilities including remote code execution, privilege escalation, and authentication 
-					bypass flaws through combined static and dynamic analysis. Strong communicator who delivers
-					actionable proof-of-concept exploits and remediation guidance to development teams. Actively 
-					expanding expertise in network penetration testing, Active Directory security, and Linux/Windows 
-					privilege escalation.
+					OSCP+ certified penetration tester with 3+ years of professional experience conducting
+					manual security assessments across web applications and APIs. Proven ability to identify
+					and chain critical vulnerabilities — including remote code execution, privilege escalation,
+					and authentication bypass — through combined static and dynamic analysis, delivering
+					proof-of-concept exploits and remediation guidance development teams can act on.
+					Professional background is rooted in web and API security, with OSCP+ validating
+					hands-on exploitation skills across network infrastructure, Active Directory environments,
+					and Linux/Windows privilege escalation through extensive lab work and HackTheBox practice.
 				</p>
 
 				<h3 class="section-heading">Hobbies and Interests</h3>
@@ -346,13 +309,13 @@
 					<img src="images/aboutme2.jpg" height="200" alt="">
 				</div>
 				<p class="body-text">
-					I’m a huge nature enthusiast and spend a good amount of my free time exploring new trails 
+					I'm a huge nature enthusiast and spend a good amount of my free time exploring new trails
 					or going to the park and running with my wife and dog. Chattanooga is an amazing city for 
 					this kind of lifestyle where we are able to explore nearly endless amounts of hiking trails
 					filled with beautiful scenery right next to downtown where we find great spots to eat or 
 					drink with friends and family.
 					<br><br>
-					When the weather doesn’t permit us to be out for long, or at all, I keep myself entertained inside
+					When the weather doesn't permit us to be out for long, or at all, I keep myself entertained inside
 					by reading books on technology or space innovation, Chasing New Horizons as of lately which describes
 					in stunning detail the New Horizon satellite that launched mid-2015 to explore Pluto and the Kepler belt. 
 					I also enjoy playing open-world or MMORGP video games such as Oldschool RuneScape and Skyrim.
