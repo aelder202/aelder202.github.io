@@ -63,9 +63,9 @@
 			<!-- Social Icons -->
 			<ul class="icons">
 				<h2>Connect With Me</h2>
-				<li><a href="https://github.com/aelder202" target="_blank" class="icon brands" title="GitHub"><i class="fab fa-github"></i></a></li>
-				<li><a href="https://app.hackthebox.com/users/2048041" target="_blank" class="icon brands" title="HackTheBox"><i class="fas fa-cube"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" class="icon brands" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="https://github.com/aelder202" target="_blank" rel="noopener" class="icon brands" title="GitHub"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://app.hackthebox.com/users/2048041" target="_blank" rel="noopener" class="icon brands" title="HackTheBox"><i class="fas fa-cube"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" rel="noopener" class="icon brands" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
 				<li><a href="mailto:contact@taylorelder.com" class="icon brands" title="Email"><i class="far fa-envelope"></i></a></li>
 			</ul>
 
@@ -214,6 +214,17 @@
 				<header>
 					<h2>Projects</h2>
 				</header>
+				<p class="section-lede">
+					Selected security projects focused on offensive tooling, repeatable exploitation workflows,
+					and operator-ready documentation. Each project emphasizes authorized use, secure design,
+					and clear technical reasoning.
+				</p>
+
+				<div class="project-proof-row" aria-label="Project focus areas">
+					<span><strong>Offensive tooling</strong><small>Go, APIs, operator UX</small></span>
+					<span><strong>Security controls</strong><small>Encryption, auth, replay defense</small></span>
+					<span><strong>Field notes</strong><small>Web, AD, Linux, Windows</small></span>
+				</div>
 
 				<div class="project-grid">
 
@@ -228,8 +239,39 @@
 						</div>
 						<span class="project-kicker">Featured Project</span>
 						<h3>Sable C2 Tool</h3>
-						<p>An open source Go command-and-control tool with encrypted HTTPS beacons, DNS fallback, and operator access through a Web UI and CLI.</p>
-						<button class="open-modal-btn" data-modal="modal-sable">Learn More</button>
+						<p>Authorized-use command-and-control framework written in Go, focused on encrypted agent communication, operator workflow design, and secure API boundaries.</p>
+						<dl class="project-meta">
+							<div>
+								<dt>Role</dt>
+								<dd>Builder</dd>
+							</div>
+							<div>
+								<dt>Stack</dt>
+								<dd>Go, Web UI, CLI</dd>
+							</div>
+							<div>
+								<dt>Status</dt>
+								<dd>Open source</dd>
+							</div>
+						</dl>
+						<ul class="project-highlights">
+							<li>Encrypted HTTPS beacon transport with DNS fallback</li>
+							<li>AES-GCM, HMAC authentication, HKDF-derived keys, and replay protection</li>
+							<li>JWT-protected operator API exposed through browser and terminal workflows</li>
+						</ul>
+						<ul class="project-tags" aria-label="Sable technologies">
+							<li>Go</li>
+							<li>AES-GCM</li>
+							<li>HMAC</li>
+							<li>DNS Fallback</li>
+							<li>JWT</li>
+						</ul>
+						<div class="project-actions">
+							<button class="open-modal-btn" data-modal="modal-sable" type="button">Case Study</button>
+							<a class="button button-secondary" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
+								<i class="fab fa-github fa-fw"></i> GitHub
+							</a>
+						</div>
 					</div>
 
 					<div class="project-card">
@@ -238,14 +280,42 @@
 							<span class="terminal-dot"></span>
 							<span class="terminal-dot"></span>
 							<code>$ tree red-team-runbook/</code>
-							<code>├── web/ — xss, ssrf, sqli</code>
-							<code>├── active-directory/ — kerberoast, dcsync</code>
-							<code>├── linux-privesc/ — suid, sudo, kernel</code>
-							<code>└── windows-privesc/ — uac, services, tokens</code>
+							<code>|-- web/ - xss, ssrf, sqli</code>
+							<code>|-- active-directory/ - kerberoast, dcsync</code>
+							<code>|-- linux-privesc/ - suid, sudo, kernel</code>
+							<code>`-- windows-privesc/ - uac, services, tokens</code>
 						</div>
 						<h3>Red Team Reference Manual</h3>
-						<p>An ongoing reference manual built through HackTheBox and lab practice — covering web exploitation, network attacks, Active Directory enumeration, and privilege escalation techniques across Windows and Linux targets.</p>
-						<button onclick="window.open('https://taylorelder.com/red-team-runbook','_blank')">View Site</button>
+						<p>A structured field manual built through HackTheBox and lab practice, organized around repeatable workflows for web, Active Directory, Linux, and Windows exploitation.</p>
+						<dl class="project-meta">
+							<div>
+								<dt>Role</dt>
+								<dd>Author</dd>
+							</div>
+							<div>
+								<dt>Format</dt>
+								<dd>Static docs</dd>
+							</div>
+							<div>
+								<dt>Status</dt>
+								<dd>Living reference</dd>
+							</div>
+						</dl>
+						<ul class="project-highlights">
+							<li>Technique-first notes built from repeated lab execution</li>
+							<li>Coverage across web exploitation, AD attacks, and host privilege escalation</li>
+							<li>Command examples and decision points organized for fast recall during practice</li>
+						</ul>
+						<ul class="project-tags" aria-label="Runbook topics">
+							<li>Web Exploitation</li>
+							<li>Active Directory</li>
+							<li>Linux PrivEsc</li>
+							<li>Windows PrivEsc</li>
+						</ul>
+						<div class="project-actions">
+							<button class="open-modal-btn" data-modal="modal-runbook" type="button">Topics Covered</button>
+							<a class="button button-secondary" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener">View Runbook</a>
+						</div>
 					</div>
 
 				</div>
@@ -254,26 +324,86 @@
 
 
 		<!-- Modal for Sable -->
-		<div class="modal modal_multi" id="modal-sable">
+		<div class="modal modal_multi" id="modal-sable" role="dialog" aria-modal="true" aria-labelledby="modal-sable-title" aria-describedby="modal-sable-desc" tabindex="-1">
 			<div class="modal-content">
-				<span class="close close_multi">&times;</span>
-				<h2 class="modal-title">Sable C2 Tool</h2>
-				<p class="body-text">
+				<button class="close close_multi" type="button" aria-label="Close Sable case study">&times;</button>
+				<h2 class="modal-title" id="modal-sable-title">Sable C2 Tool</h2>
+				<p class="body-text" id="modal-sable-desc">
 					Sable is an authorized-use command-and-control tool written in Go. The project
 					implements a Sable server that receives encrypted agent beacons over HTTPS with DNS as a
 					fallback transport, then exposes operator workflows through a browser-based Web UI and an
 					interactive CLI.
 				</p>
-				<p class="body-text">
-					The architecture highlights secure operator boundaries and agent communication design:
-					AES-256-GCM encrypted beacons, HMAC-SHA256 authentication, HKDF-derived keys, replay
-					protection with nonce caching, timestamp validation, TLS certificate fingerprint pinning,
-					JWT-protected REST endpoints, and a loopback-only operator API.
-				</p>
+				<div class="case-study-grid">
+					<section>
+						<h3>Goal</h3>
+						<p>Build a lab-safe C2 framework to better understand agent/server communication, operator tasking, and the security controls needed around offensive tooling.</p>
+					</section>
+					<section>
+						<h3>Architecture</h3>
+						<p>Go server, encrypted agents, HTTPS transport, DNS fallback, browser UI, interactive CLI, and a loopback-only operator API boundary.</p>
+					</section>
+					<section>
+						<h3>Security Controls</h3>
+						<p>AES-256-GCM encrypted beacons, HMAC-SHA256 authentication, HKDF-derived keys, nonce caching, timestamp validation, TLS certificate fingerprint pinning, and JWT-protected REST endpoints.</p>
+					</section>
+					<section>
+						<h3>What It Shows</h3>
+						<p>Secure transport design, key-handling decisions, API boundary thinking, and the ability to build usable operator workflows around low-level security mechanics.</p>
+					</section>
+				</div>
+				<h3 class="modal-section-label">Next Improvements</h3>
+				<ul class="modal-list">
+					<li>Role-based operator access for separating administrative and tasking actions.</li>
+					<li>Improved task queue observability for session state, errors, and response timing.</li>
+					<li>Broader integration coverage around agent lifecycle and transport failover behavior.</li>
+				</ul>
 				<div class="modal-actions">
-					<button onclick="window.open('https://github.com/aelder202/sable','_blank')" type="button">
+					<a class="button" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
 						<i class="fab fa-github fa-fw"></i> View on GitHub
-					</button>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for Red Team Reference Manual -->
+		<div class="modal modal_multi" id="modal-runbook" role="dialog" aria-modal="true" aria-labelledby="modal-runbook-title" aria-describedby="modal-runbook-desc" tabindex="-1">
+			<div class="modal-content">
+				<button class="close close_multi" type="button" aria-label="Close Red Team Reference Manual details">&times;</button>
+				<h2 class="modal-title" id="modal-runbook-title">Red Team Reference Manual</h2>
+				<p class="body-text" id="modal-runbook-desc">
+					The Red Team Reference Manual is a living technical notebook built from lab repetition,
+					HackTheBox practice, and hands-on exploitation workflows. It is structured to support fast
+					recall without hiding the reasoning behind each technique.
+				</p>
+				<div class="case-study-grid">
+					<section>
+						<h3>Purpose</h3>
+						<p>Convert practice notes into a repeatable reference for enumeration, exploitation, privilege escalation, and post-exploitation decision making.</p>
+					</section>
+					<section>
+						<h3>Coverage</h3>
+						<p>Web exploitation, network enumeration, Active Directory attack paths, Linux privilege escalation, and Windows privilege escalation.</p>
+					</section>
+					<section>
+						<h3>UX Focus</h3>
+						<p>Commands, prerequisites, indicators, and follow-on checks are grouped by workflow so the manual works as a practical field reference.</p>
+					</section>
+					<section>
+						<h3>Portfolio Value</h3>
+						<p>Shows consistent hands-on practice, organized technical writing, and the ability to translate exploitation steps into reusable guidance.</p>
+					</section>
+				</div>
+				<h3 class="modal-section-label">Highlighted Areas</h3>
+				<ul class="modal-list">
+					<li>Web vulnerability testing notes for XSS, SSRF, SQL injection, file upload, and auth issues.</li>
+					<li>Active Directory workflows for enumeration, Kerberoasting, delegation abuse, and credential attacks.</li>
+					<li>Linux and Windows privilege escalation checks organized around repeatable triage paths.</li>
+				</ul>
+				<div class="modal-actions">
+					<a class="button" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener">
+						View Runbook
+					</a>
 				</div>
 			</div>
 		</div>
@@ -291,30 +421,28 @@
 				<br>
 				<p class="body-text">
 					OSCP+ certified penetration tester with 3+ years of professional experience conducting
-					manual security assessments across web applications and APIs. Proven ability to identify
-					and chain critical vulnerabilities — including remote code execution, privilege escalation,
-					and authentication bypass — through combined static and dynamic analysis, delivering
-					proof-of-concept exploits and remediation guidance development teams can act on.
-					Professional background is rooted in web and API security, with OSCP+ validating
-					hands-on exploitation skills across network infrastructure, Active Directory environments,
-					and Linux/Windows privilege escalation through extensive lab work and HackTheBox practice.
+					manual web application and API security assessments. I focus on finding, validating, and
+					clearly communicating exploitable risk, from authentication bypass and remote code execution
+					to privilege escalation and chained attack paths.
+				</p>
+				<p class="body-text">
+					My professional background is rooted in application security, with OSCP+ and lab work
+					extending that hands-on practice into network infrastructure, Active Directory, and
+					Linux/Windows privilege escalation.
 				</p>
 
 				<h3 class="section-heading">Hobbies and Interests</h3>
 				<div class="wrapingimage-right">
-					<img src="images/aboutme2.jpg" height="200" alt="">
+					<img src="images/aboutme2.jpg" height="200" alt="Taylor Elder and his wife outdoors near Chattanooga">
 				</div>
 				<p class="body-text">
-					I'm a huge nature enthusiast and spend a good amount of my free time exploring new trails
-					or going to the park and running with my wife and dog. Chattanooga is an amazing city for 
-					this kind of lifestyle where we are able to explore nearly endless amounts of hiking trails
-					filled with beautiful scenery right next to downtown where we find great spots to eat or 
-					drink with friends and family.
+					Outside of security work, I spend a lot of time outdoors with my wife and dog. Chattanooga
+					makes that easy, with hiking trails, parks, and downtown spots all close together.
 					<br><br>
-					When the weather doesn't permit us to be out for long, or at all, I keep myself entertained inside
-					by reading books on technology or space innovation, Chasing New Horizons as of lately which describes
-					in stunning detail the New Horizon satellite that launched mid-2015 to explore Pluto and the Kepler belt. 
-					I also enjoy playing open-world or MMORGP video games such as Oldschool RuneScape and Skyrim.
+					When I'm inside, I like reading about technology and space exploration. Recently that has
+					included Chasing New Horizons, which covers the New Horizons mission, its 2015 Pluto flyby,
+					and exploration of the Kuiper Belt. I also enjoy open-world and MMORPG games such as
+					Old School RuneScape and Skyrim.
 				</p>
 				<br>
 
@@ -332,9 +460,9 @@
 					You can contact me through any of the social media links provided below or through email.
 				</p>
 				<div class="social-links">
-					<a href="https://github.com/aelder202" target="_blank" title="GitHub"><i class="fab fa-github fa-3x fa-fw"></i></a>
-					<a href="https://app.hackthebox.com/users/2048041" target="_blank" title="HackTheBox"><i class="fas fa-cube fa-3x fa-fw"></i></a>
-					<a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-3x fa-fw"></i></a>
+					<a href="https://github.com/aelder202" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github fa-3x fa-fw"></i></a>
+					<a href="https://app.hackthebox.com/users/2048041" target="_blank" rel="noopener" title="HackTheBox"><i class="fas fa-cube fa-3x fa-fw"></i></a>
+					<a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin fa-3x fa-fw"></i></a>
 					<a href="mailto:contact@taylorelder.com" title="Email"><i class="far fa-envelope fa-3x fa-fw"></i></a>
 				</div>
 			</div>
