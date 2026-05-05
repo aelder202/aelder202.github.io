@@ -92,6 +92,16 @@
 	}
 
 	document.addEventListener("DOMContentLoaded", () => {
+		// Honor OS-level reduced-motion preference: render a single static phrase
+		// instead of the rotating typewriter loop.
+		const prefersReducedMotion = window.matchMedia
+			&& window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		if (prefersReducedMotion) {
+			element.textContent = phrases[0];
+			return;
+		}
+
 		shuffledPhrases = shuffleArray(phrases);
 		if (shuffledPhrases.length > 1 && shuffledPhrases[0] === shuffledPhrases[1]) {
 			[shuffledPhrases[0], shuffledPhrases[1]] = [shuffledPhrases[1], shuffledPhrases[0]];

@@ -1,0 +1,24 @@
+# Local AI tooling state and configuration
+.claude/
+.cursor/
+.continue/
+.cody/
+.aider*
+.copilot/
+
+# Agent guidance / instruction files (kept local, not published)
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.cursorrules
+.github/copilot-instructions.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

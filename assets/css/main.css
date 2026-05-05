@@ -513,12 +513,14 @@ input::-moz-focus-inner {
 .cert-link {
 	text-decoration: none;
 	border: none;
-	display: inline-block; /* Keeps the link from behaving like inline text */
+	display: block; /* Fills the card so the whole padded area is clickable */
+	color: inherit;
 }
 
 .cert-link img {
 	border: none;
-	display: block; /* Optional but helps avoid spacing artifacts */
+	display: block;
+	margin: 0 auto;
 }
   
 
@@ -1037,6 +1039,16 @@ a:hover,
 	color: rgba(54, 211, 153, 0.52);
 }
 
+#header .icons h2 {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 1.4;
+	margin: 0 0 0.75em;
+	text-align: center;
+}
+
 #nav ul li a.active {
 	background: linear-gradient(90deg, rgba(54, 211, 153, 0.18), rgba(104, 168, 215, 0.08));
 	box-shadow: inset 3px 0 0 var(--accent);
@@ -1217,12 +1229,12 @@ input[type="reset"]:hover {
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-#main>section.two,
-#main>section.four {
+#main>section.panel-base,
+#main>section.panel-deep {
 	background-color: var(--panel-bg);
 }
 
-#main>section.three {
+#main>section.panel-alt {
 	background-color: var(--panel-bg-alt);
 }
 
@@ -1248,6 +1260,7 @@ input[type="reset"]:hover {
 	border: 1px solid var(--line);
 	border-radius: 8px;
 	box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+	transition: transform 0.3s ease;
 }
 
 .skill-column {
@@ -1255,7 +1268,8 @@ input[type="reset"]:hover {
 }
 
 .skill-column:hover,
-.project-card:hover {
+.project-card:hover,
+.cert-card:hover {
 	transform: translateY(-4px);
 }
 
@@ -3495,15 +3509,15 @@ button:active,
 	background-image: url("../../images/background-chatt.jpg");
 }
 
-#main>section.two {
+#main>section.panel-base {
 	background-color: #f5fafa;
 }
 
-#main>section.three {
+#main>section.panel-alt {
 	background-color: #ecf1f1;
 }
 
-#main>section.four {
+#main>section.panel-deep {
 	background-color: #e8edec;
 }
 
@@ -4016,12 +4030,12 @@ input[type="reset"]:hover {
 	color: var(--ink) !important;
 }
 
-#main>section.two,
-#main>section.four {
+#main>section.panel-base,
+#main>section.panel-deep {
 	background-color: var(--panel-bg);
 }
 
-#main>section.three {
+#main>section.panel-alt {
 	background-color: var(--panel-bg-alt);
 }
 
@@ -4095,5 +4109,72 @@ input[type="reset"]:hover {
 @media screen and (max-width: 736px) {
 	.cyber-title {
 		font-size: 2.35rem;
+	}
+}
+
+/* Skip link — keyboard accessibility */
+.skip-link {
+	background: var(--accent-strong);
+	border-radius: 4px;
+	color: #06100d;
+	font-weight: 700;
+	left: 1rem;
+	padding: 0.6rem 1rem;
+	position: absolute;
+	top: -100px;
+	transition: top 0.2s ease;
+	z-index: 10000;
+}
+
+.skip-link:focus {
+	outline: 2px solid var(--accent-warm);
+	outline-offset: 2px;
+	top: 1rem;
+}
+
+/* Runbook project visual — paired aesthetic with .sable-visual */
+.runbook-visual {
+	background:
+		radial-gradient(circle at 18% 22%, rgba(104, 168, 215, 0.22), transparent 28%),
+		linear-gradient(145deg, #071016, #11202a);
+}
+
+/* Skill pills — replaces bulleted list inside .skill-column */
+.skill-column ul.skill-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	margin: 0;
+	padding: 0;
+}
+
+.skill-column ul.skill-pills li {
+	background: rgba(54, 211, 153, 0.08);
+	border: 1px solid rgba(54, 211, 153, 0.28);
+	border-bottom: 1px solid rgba(54, 211, 153, 0.28);
+	border-radius: 999px;
+	color: var(--ink);
+	font-size: 0.82rem;
+	font-weight: 500;
+	line-height: 1.3;
+	padding: 0.32rem 0.72rem;
+}
+
+.skill-column ul.skill-pills li:last-child {
+	border-bottom: 1px solid rgba(54, 211, 153, 0.28);
+}
+
+/* Reduced-motion: disable continuous animations */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+
+	#typewriter::after {
+		animation: none !important;
 	}
 }
