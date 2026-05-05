@@ -13,6 +13,11 @@ GEMINI.md
 .cursorrules
 .github/copilot-instructions.md
 
+# Private documents
+Elder.Resume.pdf
+*.Resume.pdf
+*.resume.pdf
+
 # OS
 .DS_Store
 Thumbs.db
