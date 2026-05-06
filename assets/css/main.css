@@ -497,12 +497,14 @@ input::-moz-focus-inner {
 
 .certifications {
 	display: flex;
+	align-items: stretch;
 	gap: 8rem; /* Space between cards */
 	flex-wrap: wrap; /* Allows stacking on smaller screens */
 	justify-content: center; /* Optional: center them horizontally */
   }
   
   .cert-card {
+	display: flex;
 	text-align: center;
 	max-width: 320px; /* increase from 250px */
 	flex: 1 1 320px;   /* allows it to grow */
@@ -512,14 +514,23 @@ input::-moz-focus-inner {
 .cert-link {
 	text-decoration: none;
 	border: none;
-	display: block; /* Fills the card so the whole padded area is clickable */
+	align-items: center;
 	color: inherit;
+	display: flex; /* Fills the card so the whole padded area is clickable */
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5rem;
+	width: 100%;
 }
 
+.cert-image,
 .cert-link img {
 	border: none;
 	display: block;
+	height: auto;
 	margin: 0 auto;
+	max-width: 100%;
+	width: 230px;
 }
   
 
