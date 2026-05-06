@@ -13,6 +13,9 @@ GEMINI.md
 .cursorrules
 .github/copilot-instructions.md
 
+# AI-generated planning artifacts (specs, plans, designs)
+docs/superpowers/
+
 # Private documents
 Elder.Resume.pdf
 *.Resume.pdf
