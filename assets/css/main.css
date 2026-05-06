@@ -1,5 +1,4 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
 /*
 	Prologue by HTML5 UP
@@ -777,7 +776,7 @@ html {
 
 body {
 	background: #fff;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 	font-size: 19pt;
 	font-weight: 300;
 	line-height: 1.75em;
@@ -800,7 +799,7 @@ body.is-preload *:after {
 input,
 textarea,
 select {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 	font-size: 19pt;
 	font-weight: 300;
 	line-height: 1.75em;
@@ -998,7 +997,7 @@ textarea,
 select {
 	background: var(--site-bg);
 	color: var(--muted);
-	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 h1,
@@ -1464,7 +1463,7 @@ input[type="reset"]:hover {
 		font-size: 0.68rem;
 	}
 
-	.wrapingimage-right {
+	.wrappingimage-right {
 		float: none;
 		margin: 0 0 1rem;
 		max-width: 100%;
@@ -2963,20 +2962,20 @@ article:last-child {
 /* Image */
 
 /* Wrap words around text */
-.wrapingimage-left {
+.wrappingimage-left {
 	float: left;
 	margin: 5px 12px 3px 4px;
 	max-width: 45%;
 }
 
-.wrapingimage-right {
+.wrappingimage-right {
 	float: right;
 	margin: 5px 12px 3px 4px;
 	max-width: 45%;
 }
 
-.wrapingimage-left img,
-.wrapingimage-right img {
+.wrappingimage-left img,
+.wrappingimage-right img {
 	max-width: 100%;
 	height: auto;
 }
