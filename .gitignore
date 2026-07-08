@@ -16,10 +16,14 @@ GEMINI.md
 # AI-generated planning artifacts (specs, plans, designs)
 docs/superpowers/
 
-# Private documents
+# Private documents (resumes in any format)
 Elder.Resume.pdf
 *.Resume.pdf
 *.resume.pdf
+*.Resume.docx
+*.resume.docx
+*.Resume.Vanguard.docx
+Elder.Resume.*
 
 # OS
 .DS_Store

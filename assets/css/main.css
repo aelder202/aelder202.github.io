@@ -1278,6 +1278,119 @@ input[type="reset"]:hover {
 	transition: transform 0.3s ease;
 }
 
+.cert-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1.5rem;
+	width: 100%;
+}
+
+.cert-progress-badge {
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0.25rem 0.75rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.cert-emblem {
+	font-size: 3.25rem;
+	line-height: 1;
+	color: var(--accent);
+	margin-bottom: 1rem;
+}
+
+.cert-note {
+	margin-top: 0.5rem;
+	font-size: 0.85rem;
+	color: var(--muted);
+}
+
+.clearance-note {
+	margin-top: 3rem;
+	text-align: center;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+/* Writeups section (PHASE B: markup lives commented-out in index.html) */
+.writeup-grid {
+	display: grid;
+	gap: 1.6rem;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	margin: 2rem auto 0;
+	max-width: 1120px;
+}
+
+.writeup-card {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(180deg, rgba(20, 31, 40, 0.98), rgba(12, 19, 25, 0.98));
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+	padding: 1.5rem;
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.3s ease;
+}
+
+.writeup-card:hover {
+	transform: translateY(-4px);
+}
+
+.writeup-card-head {
+	display: flex;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.writeup-os,
+.writeup-difficulty {
+	display: inline-block;
+	padding: 0.2rem 0.6rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: 0.7rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.writeup-card h3 {
+	color: var(--ink);
+	margin: 0 0 0.5rem;
+}
+
+.writeup-card p {
+	color: var(--muted);
+}
+
+.writeup-tags {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin: 1rem 0 0;
+	padding: 0;
+}
+
+.writeup-tags li {
+	background: rgba(104, 168, 215, 0.08);
+	border: 1px solid rgba(104, 168, 215, 0.24);
+	border-radius: 6px;
+	padding: 0.25rem 0.6rem;
+	font-size: 0.72rem;
+	color: var(--muted);
+}
+
 .skill-column {
 	text-align: left;
 }
@@ -4130,7 +4243,7 @@ input[type="reset"]:hover {
 	}
 }
 
-/* Skip link — keyboard accessibility */
+/* Skip link - keyboard accessibility */
 .skip-link {
 	background: var(--accent-strong);
 	border-radius: 4px;
@@ -4150,14 +4263,14 @@ input[type="reset"]:hover {
 	top: 1rem;
 }
 
-/* Runbook project visual — paired aesthetic with .sable-visual */
+/* Runbook project visual - paired aesthetic with .sable-visual */
 .runbook-visual {
 	background:
 		radial-gradient(circle at 18% 22%, rgba(104, 168, 215, 0.22), transparent 28%),
 		linear-gradient(145deg, #071016, #11202a);
 }
 
-/* Skill pills — replaces bulleted list inside .skill-column */
+/* Skill pills - replaces bulleted list inside .skill-column */
 .skill-column ul.skill-pills {
 	display: flex;
 	flex-wrap: wrap;
@@ -4564,7 +4677,7 @@ input[type="reset"]:hover {
 
 
 /* ============================================================
-   Experience Section — vertical timeline
+   Experience Section - vertical timeline
    ============================================================ */
 
 #experience .experience-timeline {
