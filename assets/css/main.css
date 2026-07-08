@@ -1300,24 +1300,33 @@ input[type="reset"]:hover {
 	color: var(--muted);
 }
 
-.cert-emblem {
-	font-size: 3.25rem;
-	line-height: 1;
-	color: var(--accent);
-	margin-bottom: 1rem;
-}
-
 .cert-note {
 	margin-top: 0.5rem;
 	font-size: 0.85rem;
 	color: var(--muted);
 }
 
-.clearance-note {
-	margin-top: 3rem;
+.clearance-wrap {
 	text-align: center;
-	color: var(--muted);
-	font-size: 0.95rem;
+	margin: 1.5rem 0 3.25rem;
+}
+
+.clearance-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	padding: 0.5rem 1.1rem;
+	border: 1px solid rgba(54, 211, 153, 0.35);
+	border-radius: 999px;
+	background: rgba(54, 211, 153, 0.08);
+	color: var(--ink);
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.clearance-chip i {
+	color: var(--accent);
 }
 
 /* Writeups section (PHASE B: markup lives commented-out in index.html) */
