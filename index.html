@@ -2,22 +2,22 @@
 <html>
 
 <head>
-	<title>Taylor Elder | Penetration Tester | Application Security | OSCP+</title>
+	<title>Taylor Elder | Penetration Tester | Network, AD &amp; Web | OSCP+</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Taylor Elder's offensive security portfolio featuring penetration testing projects, certifications, education, and personal background." />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Taylor Elder | Penetration Tester | Application Security | OSCP+" />
-	<meta property="og:description" content="Offensive security portfolio covering web, API, and infrastructure penetration testing, backed by OSCP-validated exploitation skills." />
+	<meta property="og:title" content="Taylor Elder | Penetration Tester | Network, AD & Web | OSCP+" />
+	<meta property="og:description" content="Full-scope offensive security portfolio: network, Active Directory, web, and API penetration testing, backed by OSCP-validated exploitation and hands-on HackTheBox writeups." />
 	<meta property="og:url" content="https://taylorelder.com/" />
 	<meta property="og:image" content="https://taylorelder.com/images/code.jpg" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Taylor Elder | Penetration Tester | Application Security | OSCP+" />
-	<meta name="twitter:description" content="Offensive security portfolio covering web, API, and infrastructure penetration testing, backed by OSCP-validated exploitation skills." />
+	<meta name="twitter:title" content="Taylor Elder | Penetration Tester | Network, AD & Web | OSCP+" />
+	<meta name="twitter:description" content="Full-scope offensive security portfolio: network, Active Directory, web, and API penetration testing, backed by OSCP-validated exploitation and hands-on HackTheBox writeups." />
 	<meta name="twitter:image" content="https://taylorelder.com/images/code.jpg" />
 
 	<!-- Favicon -->
@@ -52,9 +52,6 @@
 					<li><a href="#certs" id="certs-link"><span class="icon solid fa-award">Certifications</span></a></li>
 					<li><a href="#education" id="education-link"><span class="icon solid fa-graduation-cap">Education</span></a></li>
 					<li><a href="#projects" id="project-link"><span class="icon solid fa-th">Projects</span></a></li>
-					<!-- PHASE B: uncomment when the Writeups section is populated and live
-					<li><a href="#writeups" id="writeups-link"><span class="icon solid fa-file-lines">Writeups</span></a></li>
-					-->
 					<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 					<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 				</ul>
@@ -89,10 +86,10 @@
 					<h1 class="cyber-title">Taylor Elder</h1>
 					<p class="cyber-subtitle">Penetration Tester</p>
 					<p class="typewriter-line"><span id="typewriter"></span></p>
-					<p class="hero-summary">I'm a penetration tester working across web apps, APIs, and network infrastructure. Most of my work is hands-on testing that finds what scanners miss. I'm OSCP-certified, currently doing federal and enterprise assessments, and I spend my own time deep in HackTheBox labs.</p>
+					<p class="hero-summary">I'm an OSCP+ penetration tester who breaks into applications, APIs, and networks by hand, the work scanners can't do. My depth is in application and API exploitation, and I bring that edge to full-scope engagements across network and Active Directory. I run federal and enterprise assessments professionally, and spend the rest of my time proving out network and AD attack paths in HackTheBox labs.</p>
 					<div class="hero-metrics" aria-label="Professional highlights">
 						<span><strong>OSCP+</strong><small>Certified</small></span>
-						<span><strong>Web · API · Infra</strong><small>Testing Focus</small></span>
+						<span><strong>Web · API · Network · AD</strong><small>Testing Scope</small></span>
 						<span><strong>Federal &amp; Enterprise</strong><small>Assessment Work</small></span>
 					</div>
 					<div class="hero-actions">
@@ -332,105 +329,82 @@
 					<h2>Projects</h2>
 				</header>
 				<p class="section-lede">
-					A couple of things I build and maintain outside of client work: a hands-on
-					offensive-security reference I actually use, and a lab project I used to learn
-					how C2 frameworks work under the hood.
+					A few things I build and maintain outside of client work: a hands-on
+					offensive-security reference I actually use, retired HackTheBox writeups, and
+					a lab project I used to learn how C2 frameworks work under the hood.
 				</p>
 
-				<div class="project-grid">
+				<div class="project-showcase">
 
-					<div class="project-card project-card-featured">
-						<div class="project-visual runbook-visual" role="img" aria-label="Red Team Runbook directory structure preview">
+					<article class="project-feature">
+						<div class="project-feature-visual runbook-visual" role="img" aria-label="Red Team Runbook directory structure preview">
 							<span class="terminal-dot"></span>
 							<span class="terminal-dot"></span>
 							<span class="terminal-dot"></span>
 							<code>$ tree red-team-runbook/</code>
 							<code>recon/ - enumeration, service mapping</code>
-							<code>web/ - XSS, SSRF, SQLi</code>
 							<code>active-directory/ - Kerberoasting, DCSync</code>
 							<code>privesc/ - Linux &amp; Windows</code>
-							<code>post-ex/ - lateral movement, tunneling</code>
 						</div>
-						<span class="project-kicker">Featured Project</span>
-						<h3>Red Team Runbook</h3>
-						<p>A public offensive-security reference I built from my own pentest and lab notes. It covers recon, enumeration, web testing, exploitation, privilege escalation, lateral movement, and tunneling, along with the tools and commands I reach for most. I keep it as a living document and use it as a real field reference.</p>
-						<dl class="project-meta">
-							<div>
-								<dt>Role</dt>
-								<dd>Author</dd>
+						<div class="project-feature-copy">
+							<span class="project-kicker">Featured Reference</span>
+							<h3>Red Team Runbook</h3>
+							<p>A public offensive-security reference built from my own pentest and lab notes. I keep it organized for fast recall when I need commands, prerequisites, and follow-on checks by workflow.</p>
+							<ul class="project-tags project-tags--compact" aria-label="Red Team Runbook topics">
+								<li>Recon</li>
+								<li>Web</li>
+								<li>Active Directory</li>
+								<li>PrivEsc</li>
+							</ul>
+							<div class="project-actions">
+								<button class="open-modal-btn" data-modal="modal-runbook" type="button">Topics Covered</button>
+								<a class="button button-secondary" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener">View Runbook</a>
 							</div>
-							<div>
-								<dt>Format</dt>
-								<dd>Public reference</dd>
-							</div>
-							<div>
-								<dt>Status</dt>
-								<dd>Living document</dd>
-							</div>
-						</dl>
-						<ul class="project-highlights">
-							<li>Built from hands-on HackTheBox and lab work, in my own words</li>
-							<li>Covers recon, web, Active Directory, privilege escalation, lateral movement, and tunneling</li>
-							<li>Organized for fast recall: commands, prerequisites, and follow-on checks by workflow</li>
-						</ul>
-						<ul class="project-tags" aria-label="Red Team Runbook topics">
-							<li>Recon</li>
-							<li>Web</li>
-							<li>Active Directory</li>
-							<li>PrivEsc</li>
-							<li>Lateral Movement</li>
-							<li>Tunneling</li>
-						</ul>
-						<div class="project-actions">
-							<button class="open-modal-btn" data-modal="modal-runbook" type="button">Topics Covered</button>
-							<a class="button button-secondary" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener">View Runbook</a>
 						</div>
-					</div>
+					</article>
 
-					<div class="project-card">
-						<div class="project-visual sable-visual" role="img" aria-label="Sable command-and-control interface preview">
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<code>sable&gt; sessions --transport https,dns</code>
-							<code>[+] encrypted beacon accepted</code>
-							<code>[+] operator ui: 127.0.0.1:8443</code>
-						</div>
-						<span class="project-kicker">Lab Study</span>
-						<h3>Sable Command-and-Control</h3>
-						<p>An AI-assisted lab project I used to understand how command-and-control frameworks actually work: encrypted beacons, transport fallback, and the security controls around them. I generated the Go with AI and ran it in an isolated lab. The value for me was studying why each control matters, not writing the code.</p>
-						<dl class="project-meta">
-							<div>
-								<dt>Type</dt>
-								<dd>Self-study lab</dd>
+					<div class="project-row-list" aria-label="Additional projects">
+						<article class="project-row project-row--reference">
+							<div class="project-row-label">
+								<span>Reference</span>
 							</div>
-							<div>
-								<dt>Basis</dt>
-								<dd>AI-assisted (Go)</dd>
+							<div class="project-row-copy">
+								<h3>HTB Writeups</h3>
+								<p>Retired HackTheBox walkthroughs covering enumeration, foothold, and privilege escalation, written to show the reasoning behind the path.</p>
+								<ul class="project-tags project-tags--compact" aria-label="HTB Writeups topics">
+									<li>HackTheBox</li>
+									<li>Active Directory</li>
+									<li>Linux</li>
+								</ul>
 							</div>
-							<div>
-								<dt>Focus</dt>
-								<dd>C2 internals</dd>
+							<div class="project-row-actions">
+								<a class="button" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener">View Writeups</a>
+								<a class="button button-secondary" href="https://github.com/aelder202/writeups" target="_blank" rel="noopener">
+									<i class="fab fa-github fa-fw"></i> GitHub
+								</a>
 							</div>
-						</dl>
-						<ul class="project-highlights">
-							<li>Encrypted HTTPS beaconing with a DNS fallback transport</li>
-							<li>AES-GCM, HMAC authentication, HKDF-derived keys, and replay protection</li>
-							<li>JWT-protected operator API, driven from a browser UI and CLI</li>
-						</ul>
-						<ul class="project-tags" aria-label="Sable technologies">
-							<li>Go</li>
-							<li>AES-GCM</li>
-							<li>HMAC</li>
-							<li>DNS Fallback</li>
-							<li>JWT</li>
-						</ul>
-						<div class="project-actions">
-							<button class="open-modal-btn" data-modal="modal-sable" type="button">Case Study</button>
-							<a class="button button-secondary" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
-								<i class="fab fa-github fa-fw"></i> GitHub
-							</a>
-						</div>
+						</article>
+
+						<article class="project-row project-row--lab">
+							<div class="project-row-label">
+								<span>Lab Study</span>
+							</div>
+							<div class="project-row-copy">
+								<h3>Sable Command-and-Control</h3>
+								<p>An isolated C2 internals study focused on encrypted beacons, DNS fallback, replay protection, and operator API boundaries.</p>
+								<ul class="project-tags project-tags--compact" aria-label="Sable technologies">
+									<li>Go</li>
+									<li>AES-GCM</li>
+									<li>DNS Fallback</li>
+								</ul>
+							</div>
+							<div class="project-row-actions">
+								<button class="open-modal-btn" data-modal="modal-sable" type="button">Case Study</button>
+								<a class="button button-secondary" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
+									<i class="fab fa-github fa-fw"></i> GitHub
+								</a>
+							</div>
+						</article>
 					</div>
 
 				</div>
@@ -518,42 +492,6 @@
 			</div>
 		</div>
 
-
-		<!--
-			PHASE B: Writeups section. When 3-5 retired-box HackTheBox writeups are ready,
-			uncomment this whole block AND the "Writeups" nav item near the top of the page.
-			Duplicate the .writeup-card anchor for each writeup and fill in its href, title,
-			OS/difficulty, summary, and technique tags. Publish retired boxes only.
-
-			<section id="writeups" class="panel-base">
-				<div class="container">
-					<header>
-						<h2>Writeups</h2>
-					</header>
-					<p class="section-lede">
-						Walkthroughs from retired HackTheBox machines and lab targets, in my own words:
-						how I enumerated, what I exploited, and how I escalated. Retired boxes only.
-					</p>
-					<div class="writeup-grid">
-
-						<a class="writeup-card" href="REPLACE_WITH_WRITEUP_URL" target="_blank" rel="noopener">
-							<div class="writeup-card-head">
-								<span class="writeup-os">Linux</span>
-								<span class="writeup-difficulty">Medium</span>
-							</div>
-							<h3>Box Name</h3>
-							<p>A line or two on the attack path: initial foothold, the key pivot, and the privilege escalation.</p>
-							<ul class="writeup-tags" aria-label="Techniques used">
-								<li>Web</li>
-								<li>Credential Reuse</li>
-								<li>SUID</li>
-							</ul>
-						</a>
-
-					</div>
-				</div>
-			</section>
-		-->
 
 		<!-- About Me -->
 		<section id="about" class="panel-alt">
