@@ -4314,7 +4314,13 @@ input[type="reset"]:hover {
 	padding: 1.2rem;
 }
 
+.project-feature--sable {
+	border-color: rgba(243, 180, 78, 0.34);
+	box-shadow: 0 22px 52px rgba(0, 0, 0, 0.26), 0 0 32px rgba(243, 180, 78, 0.06);
+}
+
 .project-feature-visual {
+	align-self: start;
 	aspect-ratio: 4 / 3;
 	background: #071016;
 	border: 1px solid rgba(54, 211, 153, 0.18);
@@ -4322,8 +4328,29 @@ input[type="reset"]:hover {
 	display: grid;
 	gap: 0.35rem;
 	min-height: 15rem;
+	min-width: 0;
 	padding: 2.4rem 1rem 1rem;
 	position: relative;
+}
+
+.project-feature-visual.runbook-visual {
+	background:
+		radial-gradient(circle at 18% 22%, rgba(104, 168, 215, 0.22), transparent 28%),
+		linear-gradient(145deg, #071016, #11202a);
+}
+
+.project-feature-visual.writeups-visual {
+	background:
+		radial-gradient(circle at 78% 18%, rgba(104, 168, 215, 0.22), transparent 28%),
+		radial-gradient(circle at 18% 72%, rgba(54, 211, 153, 0.16), transparent 30%),
+		linear-gradient(145deg, #071016, #121d29);
+}
+
+.project-feature-visual.sable-visual {
+	background:
+		radial-gradient(circle at 82% 20%, rgba(243, 180, 78, 0.22), transparent 28%),
+		radial-gradient(circle at 14% 74%, rgba(104, 168, 215, 0.14), transparent 30%),
+		linear-gradient(145deg, #071016, #152029);
 }
 
 .project-feature-visual code {
@@ -4343,6 +4370,18 @@ input[type="reset"]:hover {
 	display: grid;
 }
 
+.project-meta-line {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	margin-bottom: 0.4rem;
+}
+
+.project-meta-line .project-kicker {
+	margin-bottom: 0;
+}
+
 .project-kicker {
 	color: var(--accent);
 	display: block;
@@ -4351,6 +4390,25 @@ input[type="reset"]:hover {
 	letter-spacing: 0.08em;
 	margin-bottom: 0.4rem;
 	text-transform: uppercase;
+}
+
+.project-pill {
+	border: 1px solid rgba(141, 169, 190, 0.28);
+	border-radius: 999px;
+	color: var(--ink);
+	display: inline-flex;
+	font-size: 0.68rem;
+	font-weight: 800;
+	letter-spacing: 0.07em;
+	line-height: 1;
+	padding: 0.24rem 0.5rem;
+	text-transform: uppercase;
+}
+
+.project-pill--ai {
+	background: rgba(243, 180, 78, 0.11);
+	border-color: rgba(243, 180, 78, 0.44);
+	color: #ffd392;
 }
 
 .project-feature h3,
@@ -4615,6 +4673,18 @@ input[type="reset"]:hover {
 	min-height: 2.65rem;
 	padding: 0.7rem 1.15rem;
 	text-align: center;
+}
+
+.modal-actions .button-secondary {
+	background: rgba(104, 168, 215, 0.12);
+	border-color: rgba(104, 168, 215, 0.58);
+	color: var(--ink) !important;
+}
+
+.modal-actions .button-secondary:hover,
+.modal-actions .button-secondary:focus {
+	background: rgba(104, 168, 215, 0.22);
+	color: #fff !important;
 }
 
 @media screen and (max-width: 960px) {

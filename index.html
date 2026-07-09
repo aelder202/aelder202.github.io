@@ -329,9 +329,10 @@
 					<h2>Projects</h2>
 				</header>
 				<p class="section-lede">
-					A few things I build and maintain outside of client work: a hands-on
-					offensive-security reference I actually use, retired HackTheBox writeups, and
-					a lab project I used to learn how C2 frameworks work under the hood.
+					A few things I build and maintain outside of client work. My day job is web and
+					API testing; these are where I push into full-scope offensive work: a field
+					reference I keep for live engagements, retired HackTheBox machines across Active
+					Directory, Windows, and Linux, and a hands-on study of how C2 tooling works under the hood.
 				</p>
 
 				<div class="project-showcase">
@@ -363,49 +364,65 @@
 						</div>
 					</article>
 
-					<div class="project-row-list" aria-label="Additional projects">
-						<article class="project-row project-row--reference">
-							<div class="project-row-label">
-								<span>Reference</span>
+					<article class="project-feature">
+						<div class="project-feature-visual writeups-visual" role="img" aria-label="HackTheBox writeups organized by platform">
+							<span class="terminal-dot"></span>
+							<span class="terminal-dot"></span>
+							<span class="terminal-dot"></span>
+							<code>$ ls -R ~/htb-writeups</code>
+							<code>active-directory/ - Administrator +2</code>
+							<code>windows/ - Access, Jeeves</code>
+							<code>linux/ - Broker, Busqueda +4</code>
+						</div>
+						<div class="project-feature-copy">
+							<span class="project-kicker">Hands-On Writeups</span>
+							<h3>HackTheBox Writeups</h3>
+							<p>Retired HackTheBox machines documented in my own words, from first enumeration through foothold and privilege escalation. I keep the set broad on purpose: Active Directory attack paths, Windows and Linux hosts, and service exploitation, building depth in the network and infrastructure work I'm moving into beyond web.</p>
+							<ul class="project-tags project-tags--compact" aria-label="HackTheBox Writeups topics">
+								<li>Active Directory</li>
+								<li>Windows</li>
+								<li>Linux</li>
+								<li>Privilege Escalation</li>
+							</ul>
+							<div class="project-actions">
+								<button class="open-modal-btn" data-modal="modal-writeups" type="button">Machines Covered</button>
+								<a class="button button-secondary" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener">View Writeups</a>
 							</div>
-							<div class="project-row-copy">
-								<h3>HTB Writeups</h3>
-								<p>Retired HackTheBox walkthroughs covering enumeration, foothold, and privilege escalation, written to show the reasoning behind the path.</p>
-								<ul class="project-tags project-tags--compact" aria-label="HTB Writeups topics">
-									<li>HackTheBox</li>
-									<li>Active Directory</li>
-									<li>Linux</li>
-								</ul>
-							</div>
-							<div class="project-row-actions">
-								<a class="button" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener">View Writeups</a>
-								<a class="button button-secondary" href="https://github.com/aelder202/writeups" target="_blank" rel="noopener">
-									<i class="fab fa-github fa-fw"></i> GitHub
-								</a>
-							</div>
-						</article>
+						</div>
+					</article>
 
-						<article class="project-row project-row--lab">
-							<div class="project-row-label">
-								<span>Lab Study</span>
+					<article class="project-feature project-feature--sable">
+						<div class="project-feature-visual sable-visual" role="img" aria-label="Sable command-and-control architecture preview">
+							<span class="terminal-dot"></span>
+							<span class="terminal-dot"></span>
+							<span class="terminal-dot"></span>
+							<code>$ sablectl sessions --transport all</code>
+							<code>beacons/ - HTTPS primary, DNS fallback</code>
+							<code>crypto/ - AES-GCM, HMAC, HKDF</code>
+							<code>operator-api/ - loopback + JWT guardrails</code>
+						</div>
+						<div class="project-feature-copy">
+							<div class="project-meta-line">
+								<span class="project-kicker">C2 Internals Lab</span>
+								<span class="project-pill project-pill--ai">AI-Assisted</span>
 							</div>
-							<div class="project-row-copy">
-								<h3>Sable Command-and-Control</h3>
-								<p>An isolated C2 internals study focused on encrypted beacons, DNS fallback, replay protection, and operator API boundaries.</p>
-								<ul class="project-tags project-tags--compact" aria-label="Sable technologies">
-									<li>Go</li>
-									<li>AES-GCM</li>
-									<li>DNS Fallback</li>
-								</ul>
-							</div>
-							<div class="project-row-actions">
+							<h3>Sable Command-and-Control</h3>
+							<p>An authorized-use C2 architecture study I ran in an isolated lab to understand how agents, encrypted transports, replay protection, and operator APIs fit together. The Go was AI-generated, but the value for me was penetration-tester fluency: reading the design, testing the controls, and learning where these systems create detection and abuse boundaries.</p>
+							<ul class="project-tags project-tags--compact" aria-label="Sable technologies">
+								<li>Go</li>
+								<li>AES-GCM</li>
+								<li>DNS Fallback</li>
+								<li>Replay Protection</li>
+								<li>Operator API</li>
+							</ul>
+							<div class="project-actions">
 								<button class="open-modal-btn" data-modal="modal-sable" type="button">Case Study</button>
 								<a class="button button-secondary" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
 									<i class="fab fa-github fa-fw"></i> GitHub
 								</a>
 							</div>
-						</article>
-					</div>
+						</div>
+					</article>
 
 				</div>
 			</div>
@@ -445,6 +462,52 @@
 				<div class="modal-actions">
 					<a class="button" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
 						<i class="fab fa-github fa-fw"></i> View on GitHub
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for HackTheBox Writeups -->
+		<div class="modal modal_multi" id="modal-writeups" role="dialog" aria-modal="true" aria-labelledby="modal-writeups-title" aria-describedby="modal-writeups-desc" tabindex="-1">
+			<div class="modal-content">
+				<button class="close close_multi" type="button" aria-label="Close HackTheBox writeups details">&times;</button>
+				<h2 class="modal-title" id="modal-writeups-title">HackTheBox Writeups</h2>
+				<p class="body-text" id="modal-writeups-desc">
+					Retired HackTheBox machines documented in my own words. Each writeup walks the full
+					path, enumeration, foothold, and privilege escalation, and focuses on the reasoning
+					behind each decision rather than just the commands. I only publish retired machines,
+					in line with HackTheBox's rules.
+				</p>
+				<div class="case-study-grid">
+					<section>
+						<h3>Active Directory</h3>
+						<p>Administrator, Escape, Cicada. Domain enumeration, credential attacks, and abuse of Active Directory misconfigurations to move from a foothold to domain control.</p>
+					</section>
+					<section>
+						<h3>Windows</h3>
+						<p>Access, Jeeves. Service enumeration, gaining an initial foothold, and escalating privileges on standalone Windows hosts.</p>
+					</section>
+					<section>
+						<h3>Linux</h3>
+						<p>Broker, Busqueda, Chemistry, LinkVortex, Titanic, UpDown. Web-facing service exploitation for initial access, then Linux privilege escalation to root.</p>
+					</section>
+					<section>
+						<h3>How I Write Them</h3>
+						<p>Full attack chain from first scan to root, with the decision points called out so the path is repeatable and teachable, not just a list of commands to copy.</p>
+					</section>
+				</div>
+				<h3 class="modal-section-label">Skills These Build</h3>
+				<ul class="modal-list">
+					<li>Active Directory enumeration and attack paths, including ACL abuse, Kerberos attacks, and credential harvesting.</li>
+					<li>Service and web exploitation used to gain an initial foothold on both Windows and Linux hosts.</li>
+					<li>Windows and Linux privilege escalation worked through repeatable enumeration and triage.</li>
+				</ul>
+				<div class="modal-actions">
+					<a class="button" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener">
+						View Writeups
+					</a>
+					<a class="button button-secondary" href="https://github.com/aelder202/writeups" target="_blank" rel="noopener">
+						<i class="fab fa-github fa-fw"></i> GitHub
 					</a>
 				</div>
 			</div>
