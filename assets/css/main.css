@@ -4254,7 +4254,6 @@ input[type="reset"]:hover {
 	--project-border: #293e49;
 	--project-space: 22px;
 	color: var(--project-text);
-	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.6;
 	overflow-wrap: anywhere;
@@ -4268,12 +4267,6 @@ input[type="reset"]:hover {
 }
 #projects a {
 	border: 0;
-}
-#main > #projects .project-heading h2 {
-	font-size: 36px;
-}
-#main > #projects .project-heading h2::after {
-	display: none;
 }
 #projects .project-tags li::marker {
 	content: "";
@@ -4299,33 +4292,14 @@ input[type="reset"]:hover {
 
 #projects .project-heading {
 	margin-bottom: 24px;
-	padding-right: 45px;
-}
-
-#projects .project-eyebrow {
-	color: var(--project-accent);
-	font-size: 11px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: .16em;
-}
-
-#projects .project-heading h2 {
-	font-size: 36px;
-	line-height: 1.2;
-	font-weight: 600;
-	letter-spacing: -.045em;
-	margin: 4px 0 8px;
-}
-
-#projects .project-heading h2 span {
-	color: var(--project-accent);
+	text-align: center;
 }
 
 #projects .project-heading p {
 	color: var(--project-muted);
 	max-width: 490px;
 	font-size: 13px;
+	margin: 0.85rem auto 0;
 }
 
 #projects .project-feature-grid, #projects .project-tools-grid {
@@ -4394,6 +4368,7 @@ input[type="reset"]:hover {
 }
 
 #projects .project-button {
+	width: 100%;
 	min-height: 39px;
 	display: inline-flex;
 	align-items: center;
@@ -4411,7 +4386,7 @@ input[type="reset"]:hover {
 	background: #66e3b5;
 }
 
-#projects .project-button i, #projects .project-footer i {
+#projects .project-button i {
 	width: 14px;
 	height: 14px;
 	flex-shrink: 0;
@@ -4484,6 +4459,7 @@ input[type="reset"]:hover {
 
 #projects .project-tool-name > i {
 	color: #89b4cb;
+	font-size: 17px;
 	width: 17px;
 	height: 17px;
 }
@@ -4505,34 +4481,10 @@ input[type="reset"]:hover {
 	line-height: 1.65;
 }
 
-#projects .project-footer {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	gap: 8px;
-	margin-top: 13px;
-}
-
-#projects .project-footer > span {
+#projects .project-tool .project-stack {
 	font-size: 11px;
 	color: #9db3c0;
-}
-
-#projects .project-footer a {
-	display: inline-flex;
-	align-items: center;
-	gap: 4px;
-	font-size: 12px;
-	min-height: 25px;
-}
-
-#projects .project-footer a:hover {
-	color: var(--project-accent);
-}
-
-#projects .project-tool details {
-	margin-top: 9px;
+	margin: 13px 0 14px;
 }
 
 @media screen and (max-width: 960px) {
@@ -4542,10 +4494,6 @@ input[type="reset"]:hover {
 }
 
 @media screen and (max-width: 560px) {
-	#projects .project-heading {
-		padding-right: 0;
-	}
-
 	#projects .project-feature-grid, #projects .project-tools-grid {
 		grid-template-columns: 1fr;
 	}
@@ -4565,7 +4513,7 @@ input[type="reset"]:hover {
 }
 
 @media(pointer:coarse) {
-	#projects summary, #projects .project-button, #projects .project-footer a {
+	#projects summary, #projects .project-button {
 		min-height: 44px;
 	}
 
