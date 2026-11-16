@@ -325,235 +325,45 @@
 		<!-- Projects -->
 		<section id="projects" class="panel-deep">
 			<div class="container">
-				<header>
-					<h2>Projects</h2>
+				<header class="project-heading">
+					<span class="project-eyebrow">Selected work</span>
+					<h2>Projects<span aria-hidden="true">.</span></h2>
+					<p>Field references, attack walkthroughs, and tools explored outside client work.</p>
 				</header>
-				<p class="section-lede">
-					A few things I build and maintain outside of client work. My day job is web and
-					API testing; these are where I push into full-scope offensive work: a field
-					reference I keep for live engagements, retired HackTheBox machines across Active
-					Directory, Windows, and Linux, and a hands-on study of how C2 tooling works under the hood.
-				</p>
-
-				<div class="project-showcase">
-
+				<div class="project-feature-grid">
 					<article class="project-feature">
-						<div class="project-feature-visual runbook-visual" role="img" aria-label="Red Team Runbook directory structure preview">
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<code>$ tree red-team-runbook/</code>
-							<code>recon/ - enumeration, service mapping</code>
-							<code>active-directory/ - Kerberoasting, DCSync</code>
-							<code>privesc/ - Linux &amp; Windows</code>
-						</div>
-						<div class="project-feature-copy">
-							<span class="project-kicker">Featured Reference</span>
-							<h3>Red Team Runbook</h3>
-							<p>A public offensive-security reference built from my own pentest and lab notes. I keep it organized for fast recall when I need commands, prerequisites, and follow-on checks by workflow.</p>
-							<ul class="project-tags project-tags--compact" aria-label="Red Team Runbook topics">
-								<li>Recon</li>
-								<li>Web</li>
-								<li>Active Directory</li>
-								<li>PrivEsc</li>
-							</ul>
-							<div class="project-actions">
-								<button class="open-modal-btn" data-modal="modal-runbook" type="button">Topics Covered</button>
-								<a class="button button-secondary" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener">View Runbook</a>
-							</div>
-						</div>
+						<div class="project-category"><i class="fas fa-book-open" aria-hidden="true"></i><span>Offensive-security reference</span></div>
+						<h3>Red Team<br class="project-break"> Runbook</h3>
+						<p>Practical pentest notes organized by workflow, from first enumeration to privilege escalation and lateral movement.</p>
+						<ul class="project-tags" aria-label="Runbook topics"><li>Recon</li><li>Active Directory</li><li>PrivEsc</li></ul>
+						<a class="project-button" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener noreferrer">View Runbook<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+						<details><summary>Topics covered<i class="fas fa-plus" aria-hidden="true"></i></summary><p>Web exploitation, Active Directory attack paths, Windows and Linux privilege escalation, lateral movement, and tunneling. Commands, prerequisites, and follow-on checks grouped for fast recall.</p></details>
 					</article>
-
 					<article class="project-feature">
-						<div class="project-feature-visual writeups-visual" role="img" aria-label="HackTheBox writeups organized by platform">
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<code>$ ls -R ~/htb-writeups</code>
-							<code>active-directory/ - Administrator +2</code>
-							<code>windows/ - Access, Jeeves</code>
-							<code>linux/ - Broker, Busqueda +4</code>
-						</div>
-						<div class="project-feature-copy">
-							<span class="project-kicker">Hands-On Writeups</span>
-							<h3>HackTheBox Writeups</h3>
-							<p>Retired HackTheBox machines documented in my own words, from first enumeration through foothold and privilege escalation. I keep the set broad on purpose: Active Directory attack paths, Windows and Linux hosts, and service exploitation, building depth in the network and infrastructure work I'm moving into beyond web.</p>
-							<ul class="project-tags project-tags--compact" aria-label="HackTheBox Writeups topics">
-								<li>Active Directory</li>
-								<li>Windows</li>
-								<li>Linux</li>
-								<li>Privilege Escalation</li>
-							</ul>
-							<div class="project-actions">
-								<button class="open-modal-btn" data-modal="modal-writeups" type="button">Machines Covered</button>
-								<a class="button button-secondary" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener">View Writeups</a>
-							</div>
-						</div>
+						<div class="project-category"><i class="fas fa-route" aria-hidden="true"></i><span>Enumeration to root</span></div>
+						<h3>HackTheBox<br class="project-break"> Writeups</h3>
+						<p>Full attack chains on retired machines, with the reasoning behind each foothold, pivot, and privilege escalation.</p>
+						<ul class="project-tags" aria-label="Writeup topics"><li>Active Directory</li><li>Windows</li><li>Linux</li></ul>
+						<a class="project-button" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener noreferrer">Read Writeups<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+						<details><summary>Machines covered<i class="fas fa-plus" aria-hidden="true"></i></summary><p>Active Directory: Administrator, Escape, and Cicada. Windows: Access and Jeeves. Linux: Broker, Busqueda, Chemistry, LinkVortex, Titanic, and UpDown.</p></details>
 					</article>
-
-					<article class="project-feature project-feature--sable">
-						<div class="project-feature-visual sable-visual" role="img" aria-label="Sable command-and-control architecture preview">
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<span class="terminal-dot"></span>
-							<code>$ sablectl sessions --transport all</code>
-							<code>beacons/ - HTTPS primary, DNS fallback</code>
-							<code>crypto/ - AES-GCM, HMAC, HKDF</code>
-							<code>operator-api/ - loopback + JWT guardrails</code>
-						</div>
-						<div class="project-feature-copy">
-							<div class="project-meta-line">
-								<span class="project-kicker">C2 Internals Lab</span>
-								<span class="project-pill project-pill--ai">AI-Assisted</span>
-							</div>
-							<h3>Sable Command-and-Control</h3>
-							<p>An authorized-use C2 architecture study I ran in an isolated lab to understand how agents, encrypted transports, replay protection, and operator APIs fit together. The Go was AI-generated, but the value for me was penetration-tester fluency: reading the design, testing the controls, and learning where these systems create detection and abuse boundaries.</p>
-							<ul class="project-tags project-tags--compact" aria-label="Sable technologies">
-								<li>Go</li>
-								<li>AES-GCM</li>
-								<li>DNS Fallback</li>
-								<li>Replay Protection</li>
-								<li>Operator API</li>
-							</ul>
-							<div class="project-actions">
-								<button class="open-modal-btn" data-modal="modal-sable" type="button">Case Study</button>
-								<a class="button button-secondary" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
-									<i class="fab fa-github fa-fw"></i> GitHub
-								</a>
-							</div>
-						</div>
+				</div>
+				<div class="project-tools-grid">
+					<article class="project-tool">
+						<header class="project-tool-heading"><div class="project-tool-name"><i class="fas fa-broadcast-tower" aria-hidden="true"></i><h3>Sable</h3></div><span class="project-type">C2 framework</span></header>
+						<p>A Go command-and-control project with encrypted beacons, HTTPS and DNS transports, and web and CLI operator interfaces.</p>
+						<div class="project-footer"><span>Go · HTTPS · DNS</span><a href="https://github.com/perhapslater/sable" target="_blank" rel="noopener noreferrer" aria-label="View Sable on GitHub">GitHub<i class="fas fa-external-link-alt" aria-hidden="true"></i></a></div>
+						<details><summary>Project details<i class="fas fa-plus" aria-hidden="true"></i></summary><p>An isolated-lab study of agent/server communication, encryption, replay protection, and operator API boundaries.</p></details>
 					</article>
-
+					<article class="project-tool">
+						<header class="project-tool-heading"><div class="project-tool-name"><i class="fas fa-anchor" aria-hidden="true"></i><h3>Anchor</h3></div><span class="project-type">Household portal</span></header>
+						<p>A portal for self-hosted apps, with welcome guides, phone setup instructions, service availability, and problem reporting.</p>
+						<div class="project-footer"><span>Go · JavaScript · Docker</span><a href="https://github.com/perhapslater/anchor" target="_blank" rel="noopener noreferrer" aria-label="View Anchor on GitHub">GitHub<i class="fas fa-external-link-alt" aria-hidden="true"></i></a></div>
+						<details><summary>Project details<i class="fas fa-plus" aria-hidden="true"></i></summary><p>Application access for people and groups, optional Tailscale sign-in, maintenance messages, and notifications keep service guidance and support alongside the apps.</p></details>
+					</article>
 				</div>
 			</div>
 		</section>
-
-
-		<!-- Modal for Sable -->
-		<div class="modal modal_multi" id="modal-sable" role="dialog" aria-modal="true" aria-labelledby="modal-sable-title" aria-describedby="modal-sable-desc" tabindex="-1">
-			<div class="modal-content">
-				<button class="close close_multi" type="button" aria-label="Close Sable case study">&times;</button>
-				<h2 class="modal-title" id="modal-sable-title">Sable Command-and-Control</h2>
-				<p class="body-text" id="modal-sable-desc">
-					Sable is an authorized-use command-and-control tool written in Go. I used it as a
-					self-study project: an AI-assisted build I ran in an isolated lab to understand how
-					agent/server C2 communication and its security controls actually work. The server
-					receives encrypted agent beacons over HTTPS with DNS as a fallback transport, and
-					exposes operator workflows through a browser-based Web UI and an interactive CLI.
-				</p>
-				<div class="case-study-grid">
-					<section>
-						<h3>Goal</h3>
-						<p>Understand C2 internals hands-on, in a safe lab setting: how agents beacon, how operators task them, and what security controls offensive tooling needs.</p>
-					</section>
-					<section>
-						<h3>Architecture</h3>
-						<p>Go server, encrypted agents, HTTPS transport, DNS fallback, browser UI, interactive CLI, and a loopback-only operator API boundary.</p>
-					</section>
-					<section>
-						<h3>Security Controls</h3>
-						<p>AES-256-GCM encrypted beacons, HMAC-SHA256 authentication, HKDF-derived keys, nonce caching, timestamp validation, TLS certificate fingerprint pinning, and JWT-protected REST endpoints.</p>
-					</section>
-					<section>
-						<h3>What I Took Away</h3>
-						<p>A working mental model of C2 comms: why you'd layer HTTPS with a DNS fallback, what AES-GCM and HMAC actually buy you, and why replay protection and certificate pinning matter. I can explain the controls and the design decisions. The Go itself was AI-generated, and I don't claim to have hand-written it.</p>
-					</section>
-				</div>
-				<div class="modal-actions">
-					<a class="button" href="https://github.com/aelder202/sable" target="_blank" rel="noopener">
-						<i class="fab fa-github fa-fw"></i> View on GitHub
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal for HackTheBox Writeups -->
-		<div class="modal modal_multi" id="modal-writeups" role="dialog" aria-modal="true" aria-labelledby="modal-writeups-title" aria-describedby="modal-writeups-desc" tabindex="-1">
-			<div class="modal-content">
-				<button class="close close_multi" type="button" aria-label="Close HackTheBox writeups details">&times;</button>
-				<h2 class="modal-title" id="modal-writeups-title">HackTheBox Writeups</h2>
-				<p class="body-text" id="modal-writeups-desc">
-					Retired HackTheBox machines documented in my own words. Each writeup walks the full
-					path, enumeration, foothold, and privilege escalation, and focuses on the reasoning
-					behind each decision rather than just the commands. I only publish retired machines,
-					in line with HackTheBox's rules.
-				</p>
-				<div class="case-study-grid">
-					<section>
-						<h3>Active Directory</h3>
-						<p>Administrator, Escape, Cicada. Domain enumeration, credential attacks, and abuse of Active Directory misconfigurations to move from a foothold to domain control.</p>
-					</section>
-					<section>
-						<h3>Windows</h3>
-						<p>Access, Jeeves. Service enumeration, gaining an initial foothold, and escalating privileges on standalone Windows hosts.</p>
-					</section>
-					<section>
-						<h3>Linux</h3>
-						<p>Broker, Busqueda, Chemistry, LinkVortex, Titanic, UpDown. Web-facing service exploitation for initial access, then Linux privilege escalation to root.</p>
-					</section>
-					<section>
-						<h3>How I Write Them</h3>
-						<p>Full attack chain from first scan to root, with the decision points called out so the path is repeatable and teachable, not just a list of commands to copy.</p>
-					</section>
-				</div>
-				<h3 class="modal-section-label">Skills These Build</h3>
-				<ul class="modal-list">
-					<li>Active Directory enumeration and attack paths, including ACL abuse, Kerberos attacks, and credential harvesting.</li>
-					<li>Service and web exploitation used to gain an initial foothold on both Windows and Linux hosts.</li>
-					<li>Windows and Linux privilege escalation worked through repeatable enumeration and triage.</li>
-				</ul>
-				<div class="modal-actions">
-					<a class="button" href="https://taylorelder.com/writeups/" target="_blank" rel="noopener">
-						View Writeups
-					</a>
-					<a class="button button-secondary" href="https://github.com/aelder202/writeups" target="_blank" rel="noopener">
-						<i class="fab fa-github fa-fw"></i> GitHub
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal for Red Team Runbook -->
-		<div class="modal modal_multi" id="modal-runbook" role="dialog" aria-modal="true" aria-labelledby="modal-runbook-title" aria-describedby="modal-runbook-desc" tabindex="-1">
-			<div class="modal-content">
-				<button class="close close_multi" type="button" aria-label="Close Red Team Runbook details">&times;</button>
-				<h2 class="modal-title" id="modal-runbook-title">Red Team Runbook</h2>
-				<p class="body-text" id="modal-runbook-desc">
-					The Red Team Runbook is a living technical notebook I built from lab repetition,
-					HackTheBox practice, and hands-on exploitation work. It's structured for fast recall,
-					without hiding the reasoning behind each technique.
-				</p>
-				<div class="case-study-grid">
-					<section>
-						<h3>Purpose</h3>
-						<p>Turn my practice notes into a repeatable reference for enumeration, exploitation, privilege escalation, and post-exploitation decisions.</p>
-					</section>
-					<section>
-						<h3>Coverage</h3>
-						<p>Recon and service enumeration, web exploitation, Active Directory attack paths, Linux and Windows privilege escalation, lateral movement, and tunneling.</p>
-					</section>
-					<section>
-						<h3>How I Use It</h3>
-						<p>Commands, prerequisites, indicators, and follow-on checks are grouped by workflow, so it works as a real field reference while I'm testing.</p>
-					</section>
-					<section>
-						<h3>Why I Built It</h3>
-						<p>Writing techniques down in my own words is how I actually learn them. Keeping it public keeps me honest about explaining the reasoning, not just the commands.</p>
-					</section>
-				</div>
-				<h3 class="modal-section-label">Highlighted Areas</h3>
-				<ul class="modal-list">
-					<li>Web testing notes for XSS, SSRF, SQL injection, file upload, and auth issues.</li>
-					<li>Active Directory workflows for enumeration, Kerberoasting, delegation abuse, and credential attacks.</li>
-					<li>Linux and Windows privilege escalation checks organized around repeatable triage paths.</li>
-				</ul>
-				<div class="modal-actions">
-					<a class="button" href="https://taylorelder.com/red-team-runbook" target="_blank" rel="noopener">
-						View Runbook
-					</a>
-				</div>
-			</div>
-		</div>
 
 
 		<!-- About Me -->
